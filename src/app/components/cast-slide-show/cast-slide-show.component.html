@@ -1,0 +1,23 @@
+<div class="swiper-container">
+    <h3>Reparto</h3>
+    <div class="swiper-wrapper">
+
+        <div *ngFor="let actor of cast"
+             class="swiper-slide text-white text-center">
+
+            <img [src]="actor.profile_path | poster" 
+                 [alt]="actor.name"
+                 class="img-thumbnail"/>
+
+            {{ actor.name }}
+        </div>
+
+    </div>
+</div>
+<div class="card-columns fadeIn mt-5">
+    <div class="card" *ngFor="let actor of cast">
+      <img [src]="actor.profile_path | poster"  class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title ">{{actor.name}}</h5>
+      </div>
+    </div>
